@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
-    </head>
-    <body>
-       <h1>Hola esta es mi app de prueba lalala</h1>
-        <script type="text/javascript" src="cordova.js"></script>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<title>Gato</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="noty.js"></script>
+	<script src="juego.js"></script>
+</head>
+<body>
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-md-offset-0">
+				<div class="panel panel-default">
+					<div class="panel-heading" align="center">
+						<strong> Juego del Gato</strong>
+					</div>
+					<div class="panel-body" id="panel">
+						<canvas width="500" height="500" id="juego"></canvas>
+					</div>
+					<div class="panel-footer" align="center">
+						<button class="btn btn-lg btn-success" id="reiniciar">Reiniciar</button>
+					</div>
+                </div>
+			</div>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+</body>
 </html>

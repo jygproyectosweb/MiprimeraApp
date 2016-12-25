@@ -1,0 +1,14 @@
+.contenedor-cuadricula {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  border: 1px solid #000;
+}
+.cuadro {
+  width: 100px;
+  border: 1px solid #000;
+  background: chocolate;
+  cursor: pointer;
+}
