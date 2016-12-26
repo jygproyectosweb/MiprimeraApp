@@ -24,6 +24,7 @@ h1 {
   list-style: none;
   padding: 0;
   display: flex;
+  justify-content: center;
 }
 .menu__item {
   padding: 15px;

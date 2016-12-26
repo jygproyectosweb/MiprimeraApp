@@ -10,6 +10,8 @@ var btn9 = document.getElementById("btn9");
 var btnNuevoJuego = document.getElementById("btn-nuevo-juego");
 var btnSalir = document.getElementById("btn-salir");
 var marcador = "X";
+var botones = document.getElementsByClassName("cuadro");
+var fondo = "DarkOrchid";
 
 function cambio() {
   if (marcador == "X") {
@@ -18,7 +20,13 @@ function cambio() {
     marcador = "X";
   }
 }
-
+function cambioFondo() {
+  if (fondo == "DarkOrchid") {
+    fondo = "skyblue";
+  } else {
+    fondo = "DarkOrchid";
+  }
+}
 function ganarX() {
   if (btn1.textContent == "X" & btn2.textContent == "X" & btn3.textContent == "X") {
     alert("gano X");
@@ -75,27 +83,22 @@ function ganarO() {
   }
 }
 
-function reiniciar() {
-  btn1.disabled = false;
-  btn1.textContent = "";
-  btn2.disabled = false;
-  btn2.textContent = "";
-  btn3.disabled = false;
-  btn4.textContent = "";
-  btn4.disabled = false;
-  btn4.textContent = "";
-  btn5.disabled = false;
-  btn5.textContent = "";
-  btn6.disabled = false;
-  btn6.textContent = "";
-  btn7.disabled = false;
-  btn7.textContent = "";
-  btn8.disabled = false;
-  btn8.textContent = "";
-  btn9.disabled = false;
-  btn9.textContent = "";
-}
 
+function reiniciar() {
+  for (i = 0; i < botones.length; i++) {
+    botones[i].style.backgroundColor = "chocolate";
+    botones[i].disabled = false;
+    botones[i].textContent = "";
+  }
+  marcador = "X";
+  fondo = "DarkOrchid"; 
+}
+function empate() {
+    if (btn1.disabled == true && btn2.disabled == true && btn3.disabled == true && btn4.disabled == true && btn5.disabled == true && btn6.disabled == true && btn7.disabled == true && btn8.disabled == true && btn9.disabled == true) {
+      alert("empate");
+      reiniciar();
+    }
+}
 btnNuevoJuego.addEventListener("click", function(){
   reiniciar();
 });
@@ -106,65 +109,92 @@ btnSalir.addEventListener("click", function(){
 
 btn1.addEventListener("click", function () {
   btn1.textContent = marcador;
+  btn1.style.background = fondo;
   btn1.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 
 btn2.addEventListener("click", function () {
   btn2.textContent = marcador;
+  btn2.style.background = fondo;
   btn2.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn3.addEventListener("click", function () {
   btn3.textContent = marcador;
+  btn3.style.background = fondo;
   btn3.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn4.addEventListener("click", function () {
   btn4.textContent = marcador;
+  btn4.style.background = fondo;
   btn4.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn5.addEventListener("click", function () {
   btn5.textContent = marcador;
+  btn5.style.background = fondo;
   btn5.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn6.addEventListener("click", function () {
   btn6.textContent = marcador;
+  btn6.style.background = fondo;
   btn6.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn7.addEventListener("click", function () {
   btn7.textContent = marcador;
+  btn7.style.background = fondo;
   btn7.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn8.addEventListener("click", function () {
   btn8.textContent = marcador;
+  btn8.style.background = fondo;
   btn8.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
 btn9.addEventListener("click", function () {
   btn9.textContent = marcador;
+  btn9.style.background = fondo;
   btn9.disabled = true;
   cambio();
+  cambioFondo();
   ganarX();
-  ganarO()
+  ganarO();
+  empate();
 });
