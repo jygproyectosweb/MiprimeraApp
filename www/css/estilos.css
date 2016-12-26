@@ -19,3 +19,16 @@ h1 {
   color: white;
   font-size: 2em;
 }
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.menu__item {
+  padding: 15px;
+  margin: 0 10px;
+  background: chocolate;
+  color: white;
+  cursor: pointer;
+}
